@@ -4,12 +4,11 @@ with open('Example.txt') as file:
 result = 0
 
 for entry in lines:
-    print("Entry: " + str(entry.split(",")))
+    first_pair = [int(x) for x in entry.split(",")[0].split("-")]
+    second_pair = [int(x) for x in entry.split(",")[1].split("-")]
 
-    first_entry = entry.split(",")[0]
-    second_entry = entry.split(",")[1]
+    print(first_pair)
+    print(first_pair[1])
+    print(second_pair)
 
-    print("First entry: " + first_entry)
-    print("Second entry: " + second_entry)
-
-    
+print("Result: " + str(result))
